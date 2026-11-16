@@ -1,214 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meet the Northstar Makers</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Page</title>
   <style>
-    :root {
-      --navy: #183153;
-      --blue: #2878a8;
-      --cream: #fffaf0;
-      --coral: #f27b66;
-      --ink: #263445;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      color: var(--ink);
-      background: var(--cream);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
     }
 
     header {
-      padding: 3rem 1.25rem 2rem;
-      text-align: center;
+      background: #1b3a5b;
       color: white;
-      background: var(--navy);
+      text-align: center;
+      padding: 30px 20px;
     }
 
     header h1 {
       margin: 0;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-    }
-
-    header p {
-      max-width: 600px;
-      margin: 0.75rem auto 0;
+      font-size: 2.5rem;
     }
 
     nav {
       position: sticky;
       top: 0;
-      z-index: 5;
-      padding: 0.8rem 1rem;
+      background: #2d6da3;
+      padding: 12px;
       text-align: center;
-      background: var(--blue);
+      z-index: 10;
     }
 
     nav a {
-      display: inline-block;
-      margin: 0 0.7rem;
       color: white;
-      font-weight: bold;
       text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
     }
 
-    nav a:hover,
-    nav a:focus {
-      text-decoration: underline;
-    }
-
-    main {
-      width: min(900px, 92%);
-      margin: 2rem auto;
-    }
-
-    .team-intro {
-      margin-bottom: 1.5rem;
-      text-align: center;
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
     }
 
     .member {
-      position: relative;
-      display: flow-root;
-      margin: 1.25rem 0;
-      padding: 1.5rem;
-      border-radius: 14px;
       background: white;
-      box-shadow: 0 4px 14px rgb(24 49 83 / 10%);
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      overflow: auto;
     }
 
     .member img {
       float: left;
-      width: 140px;
-      height: 140px;
-      margin: 0 1.25rem 0.75rem 0;
-      border: 4px solid #dcecf2;
-      border-radius: 50%;
+      width: 180px;
+      height: 180px;
       object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 4px solid #d6ebff;
     }
 
-    .member h3 {
-      margin: 0.2rem 0 0.4rem;
-      color: var(--navy);
-    }
-
-    .member p {
-      margin: 0.4rem 0;
+    .member h2 {
+      margin: 0 0 8px 0;
+      color: #1b3a5b;
     }
 
     .role {
-      color: var(--blue);
+      font-weight: bold;
+      color: #2d6da3;
+      margin-bottom: 10px;
+    }
+
+    .label {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: #ff9f6e;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 15px;
+      font-size: 0.75rem;
       font-weight: bold;
     }
 
-    .badge {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.25rem 0.65rem;
-      border-radius: 999px;
-      color: white;
-      background: var(--coral);
-      font-size: 0.8rem;
-      font-weight: bold;
+    .member-box {
+      position: relative;
     }
 
     footer {
-      padding: 1.5rem;
-      text-align: center;
+      background: #1b3a5b;
       color: white;
-      background: var(--navy);
+      text-align: center;
+      padding: 20px;
     }
 
-    @media (max-width: 560px) {
+    @media (max-width: 600px) {
       .member img {
         float: none;
         display: block;
-        margin: 0 auto 1rem;
+        margin: 0 auto 15px;
       }
 
       .member {
         text-align: center;
       }
-
-      .badge {
-        top: 0.75rem;
-        right: 0.75rem;
-      }
     }
   </style>
 </head>
 <body>
-  <header id="home">
-    <h1>Meet the Northstar Makers</h1>
-    <p>Four curious friends, one workshop, and a lot of ideas waiting to be built.</p>
+  <header>
+    <h1>Northside Robotics Club</h1>
+    <p>Building ideas, teamwork, and creativity every day.</p>
   </header>
 
-  <nav aria-label="Main navigation">
+  <nav>
     <a href="#home">Home</a>
-    <a href="#team">Our Team</a>
+    <a href="#team">Team</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <main>
-    <section id="team" aria-labelledby="team-heading">
-      <div class="team-intro">
-        <h2 id="team-heading">The people behind the projects</h2>
-        <p>We meet after school to design, build, and help each other learn new things.</p>
+  <main class="container">
+    <section id="team">
+      <div class="member-box">
+        <div class="member">
+          <span class="label">Lead Builder</span>
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Team member portrait of Alex">
+          <h2>Alex Martinez</h2>
+          <div class="role">Engineer</div>
+          <p>Alex loves building robots that solve everyday problems. He is always thinking of new ways to improve designs and help the team move forward.</p>
+        </div>
       </div>
 
-      <article class="member">
-        <span class="badge">Team captain</span>
-        <img
-          src="https://api.dicebear.com/9.x/adventurer/svg?seed=Jordan&amp;backgroundColor=b6e3f4"
-          alt="Illustrated avatar of Jordan">
-        <h3>Jordan Lee</h3>
-        <p class="role">Designer and big-picture thinker</p>
-        <p>Jordan loves sketching ideas before the team starts building. They keep everyone organized and make sure every voice is heard.</p>
-      </article>
+      <div class="member-box">
+        <div class="member">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Team member portrait of Maya">
+          <h2>Maya Johnson</h2>
+          <div class="role">Programmer</div>
+          <p>Maya is the coding expert on the team. She creates the software that helps the robots respond to instructions and complete tasks successfully.</p>
+        </div>
+      </div>
 
-      <article class="member">
-        <img
-          src="https://api.dicebear.com/9.x/adventurer/svg?seed=Amara&amp;backgroundColor=ffdfbf"
-          alt="Illustrated avatar of Amara">
-        <h3>Amara Patel</h3>
-        <p class="role">Coder and problem solver</p>
-        <p>Amara enjoys turning tricky challenges into simple steps. She writes the code that helps the team’s creations come to life.</p>
-      </article>
+      <div class="member-box">
+        <div class="member">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80" alt="Team member portrait of Daniel">
+          <h2>Daniel Kim</h2>
+          <div class="role">Designer</div>
+          <p>Daniel focuses on how the robot looks and feels. He sketches ideas and helps turn creative concepts into practical, strong designs.</p>
+        </div>
+      </div>
 
-      <article class="member">
-        <img
-          src="https://api.dicebear.com/9.x/adventurer/svg?seed=Mateo&amp;backgroundColor=c0aede"
-          alt="Illustrated avatar of Mateo">
-        <h3>Mateo Rivera</h3>
-        <p class="role">Builder and materials expert</p>
-        <p>Mateo is happiest in the workshop, testing different materials and finding clever ways to make prototypes stronger.</p>
-      </article>
-
-      <article class="member">
-        <img
-          src="https://api.dicebear.com/9.x/adventurer/svg?seed=Skye&amp;backgroundColor=d1f4d0"
-          alt="Illustrated avatar of Skye">
-        <h3>Skye Thompson</h3>
-        <p class="role">Researcher and storyteller</p>
-        <p>Skye researches how things work and shares the team’s progress. She’s great at explaining projects to new makers.</p>
-      </article>
+      <div class="member-box">
+        <div class="member">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=500&q=80" alt="Team member portrait of Priya">
+          <h2>Priya Shah</h2>
+          <div class="role">Researcher</div>
+          <p>Priya is always learning about new technology. She researches ideas, gathers information, and helps the team choose the best tools for each project.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="projects" class="team-intro">
-      <h2>What we’re making</h2>
-      <p>Our next project is a small, solar-powered model for the school garden.</p>
+    <section id="projects">
+      <h2>Our Club Goals</h2>
+      <p>Our team creates robots, builds engineering projects, and learns how technology can help people. We meet after school to work together, solve problems, and improve our skills.</p>
     </section>
   </main>
 
   <footer id="contact">
-    <p>Want to build something*
-
+    <p>Northside Robotics Club | 123 Learning Lane | roboticsclub@example.com</p>
+  </footer>
+</body>
+</html>
